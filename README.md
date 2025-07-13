@@ -9,13 +9,6 @@ A BepInEx mod for Ultimate Chicken Horse that adds player knockback functionalit
 - **r2modman compatible**: Easy installation through mod managers
 - **Safe implementation**: Uses Harmony patches to safely modify game behavior
 
-## Installation
-
-### Via r2modman (Recommended)
-1. Install r2modman
-2. Set it up for Ultimate Chicken Horse
-3. Install this mod through the mod manager
-
 ### Manual Installation
 1. Make sure BepInEx is installed in your Ultimate Chicken Horse directory
 2. Download the mod DLL file
