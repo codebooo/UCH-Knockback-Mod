@@ -7,7 +7,7 @@ A BepInEx mod for Ultimate Chicken Horse that adds player knockback functionalit
 - **Left-click knockback**: Hit or push other players by left-clicking near them
 - **Configurable settings**: Adjust knockback force and radius through the config file
 - **r2modman compatible**: Easy installation through mod managers
-- **Safe implementation**: Uses Harmony patches to safely modify game behavior
+- **Safe implementation**: Uses native Unity physics queries and BepInEx config guards
 
 ### Manual Installation
 1. Make sure BepInEx is installed in your Ultimate Chicken Horse directory
@@ -22,8 +22,9 @@ After first launch, a config file will be created at `BepInEx/config/com.uchknoc
 Available settings:
 - **EnableMod**: Enable/disable the mod (default: true)
 - **Force**: Knockback force strength (default: 15.0)
-- **Radius**: Knockback effect radius (default: 3.0)
+- **Radius**: Knockback effect radius (default: 3.0, bounded 0.1-20.0)
 - **KnockbackKey**: Key to trigger knockback (default: Mouse0 - Left Click)
+- **DebugLogging**: Enable verbose per-target logging (default: false)
 
 ## Usage
 
@@ -60,7 +61,7 @@ If the mod isn't working:
 
 Built with:
 - BepInEx 5.x
-- Harmony for runtime patching
+- Unity physics APIs (2D/3D overlap queries)
 - .NET Framework 4.7.2
 
 ## License
