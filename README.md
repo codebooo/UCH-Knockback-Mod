@@ -37,6 +37,17 @@ Available settings:
 - Compatible with r2modman and other mod managers
 - Requires BepInEx 5.4.21 or later
 
+## UCH Modding Communities
+
+If you want to stay aligned with the active Ultimate Chicken Horse modding ecosystem, these are the most useful documented hubs:
+
+- **Thunderstore (UCH community page)**: https://thunderstore.io/c/ultimate-chicken-horse/
+- **BepInEx Pack for UCH (Thunderstore dependency used by this mod)**: https://thunderstore.io/c/ultimate-chicken-horse/p/BepInEx/BepInExPack/
+- **Community modding projects on GitHub**:
+  - https://github.com/fifty-six/UltimateChickenHorse.Modding
+  - https://github.com/batram/UCH-CustomBlocks
+  - https://github.com/notfood/UCH-UltimateBuilder
+
 ## Troubleshooting
 
 If the mod isn't working:
