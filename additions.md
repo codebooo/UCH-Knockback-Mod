@@ -4,7 +4,9 @@
 **Technical approach**: In `KnockbackPlugin.Update`, read cursor world position from camera and compute aim vector from local player. Reuse existing knockback loop but optionally override direction with aim. Keep force application in `FixedUpdate`.
 ```csharp
 Vector3 mouse = Input.mousePosition;
-Vector3 world = Camera.main.ScreenToWorldPoint(mouse);
+var cam = Camera.main;
+if (cam == null) return; // or fallback to radial behavior
+Vector3 world = cam.ScreenToWorldPoint(mouse);
 Vector2 aim = ((Vector2)world - (Vector2)localPlayer.transform.position).normalized;
 ```
 

@@ -101,7 +101,7 @@ if (DebugLogging.Value) Logger.LogInfo($"Applied 2D knockback to {player.name}")
 **Impact**: Cleaner logs and lower logging overhead.
 
 ## 10. Make Harmony usage explicit and correct for actual hooks
-**Problem**: `harmony.PatchAll()` is called, but no `[HarmonyPatch]` classes are present in the shown source, so patching intent is unclear and unverifiable.
+**Problem**: `harmony.PatchAll()` is called in `KnockbackPlugin.Awake` (`KnockbackPlugin.cs` lines 39-40), but `KnockbackPlugin.cs` defines no `[HarmonyPatch]` classes, so patching intent is unclear.
 
 **Solution**: Either remove Harmony initialization until real patches exist, or add explicit patches with correct `Prefix`/`Postfix` semantics (e.g., `Prefix` to cancel default behavior, `Postfix` to react after game state updates).
 ```csharp
